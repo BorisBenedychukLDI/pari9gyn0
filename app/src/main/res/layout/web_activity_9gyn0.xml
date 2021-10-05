@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_9gyn0"
+    tools:context=".WebActivity9gyn0">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_9gyn0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.soon.pamatch.co.com.WebView9gyn0.WebView9gyn0
+            android:id="@+id/wv_9gyn0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.soon.pamatch.co.com.WebView9gyn0.WebView9gyn0>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <View
+        android:id="@+id/circle_9gyn0"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:alpha="0"
+        android:background="@drawable/yellow_circle_9gyn0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_lottie_9gyn0"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_9gyn0"
+        app:layout_constraintEnd_toEndOf="@+id/circle_9gyn0"
+        app:layout_constraintStart_toStartOf="@+id/circle_9gyn0"
+        app:layout_constraintTop_toTopOf="@+id/circle_9gyn0"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/no_internet_9gyn0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
