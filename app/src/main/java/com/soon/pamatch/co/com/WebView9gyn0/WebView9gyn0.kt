@@ -36,7 +36,6 @@ class WebView9gyn0(context9gyn0: Context, attributeSet9gyn0: AttributeSet) : Web
                 loadUrl(lastPage9gyn0)
             } else {
                 loadUrl(context9gyn0.get9gyn0Preferences().getURL9gyn0()?: return@let)
-                Log.d("TEST_URL", context9gyn0.get9gyn0Preferences().getURL9gyn0() ?: return@let)
             }
 
         }

@@ -38,7 +38,6 @@ const val REQUEST_CODE_9gyn0 = 0
 
 fun decodeBase649gyn0 (str9gyn0: String): String {
     String(Base64.decode(str9gyn0, Base64.DEFAULT)).let {
-        Log.d("Test_DECODER", it)
         return it
     }
 }
