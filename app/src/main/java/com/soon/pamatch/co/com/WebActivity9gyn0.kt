@@ -46,8 +46,6 @@ class WebActivity9gyn0 : AppCompatActivity() {
                     isShown9gyn0 = true
                 }
                 if (checkInternet9gyn0() && isShown9gyn0) {
-                    findViewById<WebView9gyn0>(R.id.wv_9gyn0).setOnTouchListener { view9gyn0, motionEvent9gyn0 -> false }
-                    findViewById<SwipeRefreshLayout>(R.id.srl_9gyn0).isEnabled = true
                     ValueAnimator.ofFloat(1f,0f).apply {
                         setEvaluator(FloatEvaluator())
                         duration = 2000
@@ -58,6 +56,8 @@ class WebActivity9gyn0 : AppCompatActivity() {
                         start()
                     }.doOnEnd {
                         playCloseAnimation9gyn0()
+                        findViewById<WebView9gyn0>(R.id.wv_9gyn0).setOnTouchListener { view9gyn0, motionEvent9gyn0 -> false }
+                        findViewById<SwipeRefreshLayout>(R.id.srl_9gyn0).isEnabled = true
                     }
                     isShown9gyn0 = false
                 }
