@@ -21,28 +21,28 @@ class Application9gyn0 : Application() {
             try {
                 AID9gyn0 =
                     AdvertisingIdClient.getAdvertisingIdInfo(this@Application9gyn0)?.id
-            } catch (e49hus2: Exception) {
+            } catch (e9gyn0: Exception) {
 
             }
         }
-        val appsFlyerConversion49hus2 = object : AppsFlyerConversionListener {
-            override fun onConversionDataSuccess(dataMap49hus2: MutableMap<String, Any>?) {
-                dataMap49hus2?.run {
+        val appsFlyerConversion9gyn0 = object : AppsFlyerConversionListener {
+            override fun onConversionDataSuccess(dataMap9gyn0: MutableMap<String, Any>?) {
+                dataMap9gyn0?.run {
 
                     status9gyn0 =
                         if (getValue(APPSFLYER_STATUS_TAG_9gyn0).toString() == ORGANIC_TAG_9gyn0) ORGANIC_TAG_9gyn0 else NON_ORGANIC_TAG_9gyn0
 
-                    val paramsArray49hus2 = mutableListOf<String>()
+                    val paramsArray9gyn0 = mutableListOf<String>()
                     getValue(APPSFLYER_CAMPAIGN_TAG_9gyn0)
                         .toString()
                         .split("||").drop(1)
                         .map {
-                            paramsArray49hus2.add(it.split(":")[1])
+                            paramsArray9gyn0.add(it.split(":")[1])
                         }
 
-                    key9gyn0 = if (paramsArray49hus2.size >= 1) paramsArray49hus2[0] else EMPTY_TAG_9gyn0
-                    sub29gyn0 = if (paramsArray49hus2.size >= 2) paramsArray49hus2[1] else EMPTY_TAG_9gyn0
-                    sub39gyn0 = if (paramsArray49hus2.size >= 3) paramsArray49hus2[2] else EMPTY_TAG_9gyn0
+                    key9gyn0 = if (paramsArray9gyn0.size >= 1) paramsArray9gyn0[0] else EMPTY_TAG_9gyn0
+                    sub29gyn0 = if (paramsArray9gyn0.size >= 2) paramsArray9gyn0[1] else EMPTY_TAG_9gyn0
+                    sub39gyn0 = if (paramsArray9gyn0.size >= 3) paramsArray9gyn0[2] else EMPTY_TAG_9gyn0
 
 
                     mediaSource9gyn0 = getValue(APPSFLYER_MEDIA_SOURCE_TAG_9gyn0).toString()
@@ -68,7 +68,7 @@ class Application9gyn0 : Application() {
             APPSFLYER_UID9gyn0 = getAppsFlyerUID(this@Application9gyn0)
             init(
                 decodeBase649gyn0(BuildConfig.APPS_KEY_9gyn0),
-                appsFlyerConversion49hus2,
+                appsFlyerConversion9gyn0,
                 this@Application9gyn0
             )
             start(this@Application9gyn0)
