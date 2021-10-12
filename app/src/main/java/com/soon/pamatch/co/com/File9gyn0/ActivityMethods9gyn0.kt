@@ -56,6 +56,7 @@ fun MainActivity9gyn0.getAndSaveURL9gyn0() {
             get9gyn0Preferences().putURL9gyn0(
                 Uri.parse(fbBlackValue9gyn0).buildUpon()
                     .appendQueryParameter(KEY_TAG_9gyn0, fbDefaultValue9gyn0)
+                    .appendQueryParameter(BUNDLE_TAG_9gyn0, packageName)
                     .appendQueryParameter(SUB7_TAG_9gyn0, ORGANIC_TAG_9gyn0)
                     .toString()
                     .plus(
